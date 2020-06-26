@@ -1,13 +1,15 @@
-@import './_customize';
-@import './itypen';
-@import './fonts';
-@import './index';
-@import './nav';
+@import './normalize';
+@import './variables';
 @import './daily';
+@import './highlight';
 @import './archive';
 @import './mobile';
-@import './post';
-@import './mag';
+@import './itypen';
+
+.article {
+  @import './itypen-md';
+}
+
 @media (prefers-color-scheme: dark) {
  @import './dark';
 }
