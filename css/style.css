@@ -24,7 +24,7 @@
 }
 @font-face {
   font-family: 'SIMYOU';
-  src: url("/fonts/SIMYOU.TTF");
+  src: url("https://cdn.jsdelivr.net/gh/Zmmmmy/Zmmmmy.github.io@latest/fonts/SIMYOU.TTF");
   font-weight: 'normal';
   font-style: 'normal';
 }
