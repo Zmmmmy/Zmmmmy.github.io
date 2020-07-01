@@ -405,7 +405,7 @@
         
           
   <h1 class="title">
-    <a href="/2020/07/01/New-SpringBoo/">
+    <a href="/2020/07/01/SpringBoot/">
       SpringBoot
     </a>
   </h1>
@@ -471,7 +471,7 @@
 <a id="more"></a>
 
 <h4 id="一、SpringBoot启动类的加载"><a href="#一、SpringBoot启动类的加载" class="headerlink" title="一、SpringBoot启动类的加载"></a>一、SpringBoot启动类的加载</h4><hr>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200509003942759.png" alt="image-20200509003942759"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200509003942759.png" alt="SpringBoot/image-20200509003942759"></p>
 <h4 id="二、配置文件"><a href="#二、配置文件" class="headerlink" title="二、配置文件"></a>二、配置文件</h4><hr>
 <h5 id="1-配置文件"><a href="#1-配置文件" class="headerlink" title="1.配置文件"></a>1.配置文件</h5><p>SpringBoot使用一个全局的配置文件，配置文件名字是固定的</p>
 <ul>
@@ -590,20 +590,20 @@
 
 
 <h5 id="7-Profile多环境"><a href="#7-Profile多环境" class="headerlink" title="7.Profile多环境"></a>7.Profile多环境</h5><h6 id="1-多Profile文件"><a href="#1-多Profile文件" class="headerlink" title="1.多Profile文件"></a>1.多Profile文件</h6><p>我们在编写配置类的时候，文件名可以是  application-{profile}.properties/yml</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200509094256248.png" alt="image-20200509094256248"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200509094256248.png" alt="SpringBoot/image-20200509094256248"></p>
 <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">server.port</span>=<span class="string">8080</span></span><br><span class="line"><span class="meta">spring.profiles.active</span>=<span class="string">dev	激活该环境</span></span><br></pre></td></tr></table></figure>
 
 <h6 id="2-yml支持多文档块方式"><a href="#2-yml支持多文档块方式" class="headerlink" title="2.yml支持多文档块方式"></a>2.yml支持多文档块方式</h6><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8080</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8083</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8084</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">prop</span></span><br></pre></td></tr></table></figure>
 
 <h6 id="3-激活指定的profile"><a href="#3-激活指定的profile" class="headerlink" title="3.激活指定的profile"></a>3.激活指定的profile</h6><p><strong>1.使用设置</strong></p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200509095717102.png" alt="image-20200509095717102"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200509095717102.png" alt="SpringBoot/image-20200509095717102"></p>
 <p><strong>2.使用命令行</strong></p>
 <p>先打包</p>
 <p>java -jar springboot-demo01-0.0.1-SNAPSHOT.jar –spring.profiles.active=dev</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200509100243226.png" alt="image-20200509100243226"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200509100243226.png" alt="SpringBoot/image-20200509100243226"></p>
 <p><strong>3.使用虚拟机参数</strong></p>
 <p>-Dspring.profiles.active=dev</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200509100534631.png" alt="image-20200509100534631"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200509100534631.png" alt="SpringBoot/image-20200509100534631"></p>
 <h6 id="4-配置文件加载位置"><a href="#4-配置文件加载位置" class="headerlink" title="4.配置文件加载位置"></a>4.配置文件加载位置</h6><ul>
 <li>file: ./config/</li>
 <li>file: ./</li>
@@ -628,8 +628,8 @@
 <p>2.jar内外部的application.properties/.yml</p>
 <h4 id="三、SpringBoot的自动配置"><a href="#三、SpringBoot的自动配置" class="headerlink" title="三、SpringBoot的自动配置"></a>三、SpringBoot的自动配置</h4><hr>
 <p>spring-boot-starter-xxxxx：<strong>导入组件所需要的依赖</strong></p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200509135646515.png" alt="image-20200509135646515"></p>
-<h6 id="1-META-INF-spring-factories下的文件"><a href="#1-META-INF-spring-factories下的文件" class="headerlink" title="1.META-INF/spring.factories下的文件"></a><strong>1.META-INF/spring.factories下的文件</strong></h6><p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200509135937329.png" alt="image-20200509135937329"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200509135646515.png" alt="SpringBoot/image-20200509135646515"></p>
+<h6 id="1-META-INF-spring-factories下的文件"><a href="#1-META-INF-spring-factories下的文件" class="headerlink" title="1.META-INF/spring.factories下的文件"></a><strong>1.META-INF/spring.factories下的文件</strong></h6><p><img src="/2020/07/01/SpringBoot/image-20200509135937329.png" alt="SpringBoot/image-20200509135937329"></p>
 <h6 id="2-xxxAutoConfiguration"><a href="#2-xxxAutoConfiguration" class="headerlink" title="2.xxxAutoConfiguration"></a><strong>2.xxxAutoConfiguration</strong></h6><p>每一个xxxAutoConfiguration类都是容器中的一个组件，用他们来做自动配置</p>
 <p>以<strong>HttpEncodingAutoConfiguration</strong>为例解释自动配置原理</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//表示这是一个自动配置类</span></span><br><span class="line"><span class="meta">@Configuration</span>(proxyBeanMethods = <span class="keyword">false</span>) </span><br><span class="line"><span class="comment">//启用指定类的@ConfigurationProperties功能，将配置文件中的值和HttpProperties绑定起来，并把HttpProperties加入到容器中</span></span><br><span class="line"><span class="meta">@EnableConfigurationProperties</span>(HttpProperties<span class="class">.<span class="keyword">class</span>) </span></span><br><span class="line"><span class="class">//组合疏注解，底层是@<span class="title">Conditiona</span>注解，根据不同条件，如果满足条件，整个配置类里的配置就会生效</span></span><br><span class="line"><span class="class">//判断当前是否为<span class="title">web</span>应用，如果是，当前配置类生效</span></span><br><span class="line"><span class="class">@<span class="title">ConditionalOnWebApplication</span>(<span class="title">type</span> </span>= ConditionalOnWebApplication.Type.SERVLET)</span><br><span class="line"><span class="comment">//判断当前是否有CharacterEncodingFilter类</span></span><br><span class="line"><span class="comment">//CharacterEncodingFilter----&gt;SpringMVC中解决乱码的过滤器</span></span><br><span class="line"><span class="meta">@ConditionalOnClass</span>(CharacterEncodingFilter<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">//判断配置文件中置否存在某个配置：<span class="title">spring</span>.<span class="title">http</span>.<span class="title">encoding</span>.<span class="title">enabled</span>,如果不存在判断也是成立的</span></span><br><span class="line"><span class="class">//即使不配置也是默认生效的：<span class="title">spring</span>.<span class="title">http</span>.<span class="title">encoding</span>.<span class="title">enabled</span></span>=<span class="keyword">true</span></span><br><span class="line"><span class="meta">@ConditionalOnProperty</span>(prefix = <span class="string">"spring.http.encoding"</span>, value = <span class="string">"enabled"</span>, matchIfMissing = <span class="keyword">true</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpEncodingAutoConfiguration</span> </span>&#123;</span><br><span class="line">    <span class="comment">//他已经和SPringBoot配置文件映射了</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> HttpProperties.Encoding properties;</span><br><span class="line">   	<span class="comment">//只有一个有参构造器，参数就会从容器中拿到</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HttpEncodingAutoConfiguration</span><span class="params">(HttpProperties properties)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.properties = properties.getEncoding();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//给容器中添加一个组件，这个组件的值，需要从properties获取</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="comment">//在该组件不存在时生效</span></span><br><span class="line">	<span class="meta">@ConditionalOnMissingBean</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> CharacterEncodingFilter <span class="title">characterEncodingFilter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		CharacterEncodingFilter filter = <span class="keyword">new</span> OrderedCharacterEncodingFilter();</span><br><span class="line">		filter.setEncoding(<span class="keyword">this</span>.properties.getCharset().name());</span><br><span class="line">		filter.setForceRequestEncoding(<span class="keyword">this</span>.properties.shouldForce(Type.REQUEST));</span><br><span class="line">		filter.setForceResponseEncoding(<span class="keyword">this</span>.properties.shouldForce(Type.RESPONSE));</span><br><span class="line">		<span class="keyword">return</span> filter;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
@@ -736,12 +736,12 @@
 <p>给系统里导入slf4j的jar和logback的实现jar</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Logger logger = LoggerFactory.getLogger(HelloWorld<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    logger.info(<span class="string">"Hello World"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200509170730760.png" alt="image-20200509170730760"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200509170730760.png" alt="SpringBoot/image-20200509170730760"></p>
 <p>每一个日志的实现框架都有自己的配置文件。使用slf4j以后，配置文件还是要导入<strong>具体实现框架的配置文件</strong></p>
 <h6 id="2-统一日志"><a href="#2-统一日志" class="headerlink" title="2.统一日志"></a>2.统一日志</h6><p>在一个项目中可能存在多个框架这就导致了多个日志框架一起使用的情况</p>
 <p>比如Spring用的是Commons-logging，Hibernate用的是jboss-logging………</p>
 <p>如何统一日志，即使是别的框架也和我使用同一个日志框架呢</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200509174048235.png" alt="image-20200509174048235"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200509174048235.png" alt="SpringBoot/image-20200509174048235"></p>
 <p>如何让系统中所有的日志都统一到<strong>slf4j</strong></p>
 <ol>
 <li>将系统中的其他日志框架先排除出去</li>
@@ -754,7 +754,7 @@
 <p>SpringBoot日志功能启动器</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-logging<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.7.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">scope</span>&gt;</span>compile<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200509222107687.png" alt="image-20200509222107687"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200509222107687.png" alt="SpringBoot/image-20200509222107687"></p>
 <p><strong>总结</strong></p>
 <ol>
 <li>SpringBoot底层原理使用的是slf4j+logback的方式进行日志记录</li>
@@ -800,21 +800,21 @@
 <p>SpringBoot日志高级功能</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">springProfile</span> <span class="attr">name</span>=<span class="string">"dev"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>输出格式<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">springProfile</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">springProfile</span> <span class="attr">name</span>=<span class="string">"!dev"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>输出格式<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">springProfile</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200510005103429.png" alt="image-20200510005103429"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200510005103429.png" alt="SpringBoot/image-20200510005103429"></p>
 <h4 id="五、Web开发"><a href="#五、Web开发" class="headerlink" title="五、Web开发"></a>五、Web开发</h4><hr>
 <p><strong>WebMvcAutoConfiguration.java</strong></p>
 <p><strong>WebMvc自动配置类</strong></p>
 <h5 id="1-SpringBoot对静态资源的映射规则"><a href="#1-SpringBoot对静态资源的映射规则" class="headerlink" title="1.SpringBoot对静态资源的映射规则"></a>1.SpringBoot对静态资源的映射规则</h5><p><strong>public enum StaticResourceLocation——–&gt;静态资源的通用位置的枚举类</strong></p>
 <p><strong>getResourceLocations——–&gt;获取资源位置</strong></p>
 <p><strong>addResourceHandlers——–&gt;添加资源处理程序</strong></p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200510111835774.png" alt="image-20200510111835774"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200510111835774.png" alt="SpringBoot/image-20200510111835774"></p>
 <h6 id="1-第一种映射规则"><a href="#1-第一种映射规则" class="headerlink" title="1.第一种映射规则"></a>1.第一种映射规则</h6><p>classpath:/META-INF/resources/webjars/</p>
 <p>webjars:SpringBoot是通过jar的打包方式，所以静态资源可以以jar包的方式引入</p>
 <p>在pom.xml添加依赖</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--引入jquery的webjars--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.webjars<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jquery<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>webjar的结构</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200510113257181.png" alt="image-20200510113257181"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200510113257181.png" alt="SpringBoot/image-20200510113257181"></p>
 <h6 id="2-第二种映射规则"><a href="#2-第二种映射规则" class="headerlink" title="2.第二种映射规则"></a>2.第二种映射规则</h6><p>/**  ：访问当前项目任何资源（静态资源文件夹）</p>
 <p>任何资源如果没人处理就在一下资源目录寻找</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">classpath:&#x2F;META-INF&#x2F;resources&#x2F;&quot;</span><br><span class="line">&quot;classpath:&#x2F;resources&#x2F;&quot;</span><br><span class="line">&quot;classpath:&#x2F;static&#x2F;&quot;</span><br><span class="line">&quot;classpath:&#x2F;public&#x2F;</span><br><span class="line">&quot;&#x2F;&quot;:当前项目的根路径</span><br></pre></td></tr></table></figure>
@@ -828,9 +828,9 @@
 
 
 
-<h5 id="2-欢迎页映射"><a href="#2-欢迎页映射" class="headerlink" title="2.欢迎页映射"></a>2.欢迎页映射</h5><p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200511001808591.png" alt="image-20200511001808591"></p>
+<h5 id="2-欢迎页映射"><a href="#2-欢迎页映射" class="headerlink" title="2.欢迎页映射"></a>2.欢迎页映射</h5><p><img src="/2020/07/01/SpringBoot/image-20200511001808591.png" alt="SpringBoot/image-20200511001808591"></p>
 <h5 id="3-模板引擎"><a href="#3-模板引擎" class="headerlink" title="3.模板引擎"></a>3.模板引擎</h5><p>JSP、Velocity、Freemarker、Thymeleaf……..</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200511002914699.png" alt="image-20200511002914699"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200511002914699.png" alt="SpringBoot/image-20200511002914699"></p>
 <p>SpringBoot推荐使用Thymeleaf</p>
 <h6 id="1-引入Thymeleaf"><a href="#1-引入Thymeleaf" class="headerlink" title="1.引入Thymeleaf"></a>1.引入Thymeleaf</h6><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-thymeleaf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -845,12 +845,12 @@
 
 
 
-<h6 id="3-Thymeleaf语法规则"><a href="#3-Thymeleaf语法规则" class="headerlink" title="3.Thymeleaf语法规则"></a>3.Thymeleaf语法规则</h6><p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200511013130844.png" alt="image-20200511013130844"></p>
+<h6 id="3-Thymeleaf语法规则"><a href="#3-Thymeleaf语法规则" class="headerlink" title="3.Thymeleaf语法规则"></a>3.Thymeleaf语法规则</h6><p><img src="/2020/07/01/SpringBoot/image-20200511013130844.png" alt="SpringBoot/image-20200511013130844"></p>
 <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Variable</span> <span class="string">Expressions: $&#123;...&#125;	</span></span><br><span class="line"><span class="comment">#获取变量值</span></span><br><span class="line"><span class="comment">#获取对象属性、调用方法</span></span><br><span class="line"><span class="comment">#使用内置对象</span></span><br><span class="line">								</span><br><span class="line"><span class="attr">Selection</span> <span class="string">Variable Expressions: *&#123;...&#125;</span></span><br><span class="line"><span class="comment">#变量选择表达式</span></span><br><span class="line"><span class="comment">#功能上和$&#123;...&#125;一样</span></span><br><span class="line"><span class="comment">#配合th:object使用</span></span><br><span class="line"><span class="meta">&lt;div</span> <span class="string">th:object="$&#123;session.user&#125;"&gt;</span></span><br><span class="line">	<span class="meta">&lt;p&gt;Name</span>: <span class="string">&lt;span th:text="*&#123;firstName&#125;"&gt;Sebastian&lt;/span&gt;.&lt;/p&gt;</span></span><br><span class="line">	<span class="meta">&lt;p&gt;Surname</span>: <span class="string">&lt;span th:text="*&#123;lastName&#125;"&gt;Pepper&lt;/span&gt;.&lt;/p&gt;</span></span><br><span class="line">	<span class="meta">&lt;p&gt;Nationality</span>: <span class="string">&lt;span th:text="*&#123;nationality&#125;"&gt;Saturn&lt;/span&gt;.&lt;/p&gt;</span></span><br><span class="line"><span class="attr">&lt;/div&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Message</span> <span class="string">Expressions: #&#123;...&#125;</span></span><br><span class="line"><span class="comment">#获取国际化内容</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Link</span> <span class="string">URL Expressions: @&#123;...&#125;</span></span><br><span class="line"><span class="comment">#定义url</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Fragment</span> <span class="string">Expressions: ~&#123;...&#125;</span></span><br><span class="line"><span class="comment">#引用表达式</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Text</span> <span class="string">literals: , ,…'one text''Another one!'</span></span><br><span class="line"><span class="attr">Number</span> <span class="string">literals: , , , ,…0343.012.3</span></span><br><span class="line"><span class="attr">Boolean</span> <span class="string">literals: , truefalse</span></span><br><span class="line"><span class="attr">Null</span> <span class="string">literal: null</span></span><br><span class="line"><span class="attr">Literal</span> <span class="string">tokens: , , ,…onesometextmain</span></span><br><span class="line"></span><br><span class="line"><span class="attr">String</span> <span class="string">concatenation: +</span></span><br><span class="line"><span class="attr">Literal</span> <span class="string">substitutions: |The name is $&#123;name&#125;|</span></span><br><span class="line"><span class="attr">Arithmetic</span> <span class="string">operations:</span></span><br><span class="line"><span class="attr">Binary</span> <span class="string">operators: , , , , +-*/%</span></span><br><span class="line"><span class="attr">Minus</span> <span class="string">sign (unary operator): -</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Binary</span> <span class="string">operators: , andor</span></span><br><span class="line"><span class="attr">Boolean</span> <span class="string">negation (unary operator): , !not</span></span><br><span class="line"><span class="attr">Comparisons</span> <span class="string">and equality:</span></span><br><span class="line"><span class="attr">Comparators</span>: <span class="string">, , , (, , , &gt;&lt;&gt;=&lt;=gtltgele)</span></span><br><span class="line"><span class="attr">Equality</span> <span class="string">operators: , (, ==!=eqne)</span></span><br><span class="line"><span class="attr">Conditional</span> <span class="string">operators:</span></span><br><span class="line"><span class="meta">If-then</span>: <span class="string">(if) ? (then)</span></span><br><span class="line"><span class="meta">If-then-else</span>: <span class="string">(if) ? (then) : (else)</span></span><br><span class="line"><span class="attr">Default</span>: <span class="string">(value) ?: (defaultvalue)</span></span><br><span class="line"><span class="attr">Special</span> <span class="string">tokens:</span></span><br><span class="line"><span class="meta">No-Operation</span>: <span class="string">_</span></span><br></pre></td></tr></table></figure>
 
 <p>[[标签内容]]：不转义</p>
 <p>[(标签内容)]：转义</p>
-<h6 id="4-重定向与转发"><a href="#4-重定向与转发" class="headerlink" title="4.重定向与转发"></a>4.重定向与转发</h6><p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200512154105180.png" alt="image-20200512154105180"></p>
+<h6 id="4-重定向与转发"><a href="#4-重定向与转发" class="headerlink" title="4.重定向与转发"></a>4.重定向与转发</h6><p><img src="/2020/07/01/SpringBoot/image-20200512154105180.png" alt="SpringBoot/image-20200512154105180"></p>
 <h5 id="4-Spring-MVC自动配置"><a href="#4-Spring-MVC自动配置" class="headerlink" title="4.Spring MVC自动配置"></a>4.Spring MVC自动配置</h5><p>Spring MVC核心组件</p>
 <p>DispatcherServlet：调度器</p>
 <p>ViewResolver：视图解析器</p>
@@ -893,12 +893,12 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span>(proxyBeanMethods = <span class="keyword">false</span>)</span><br><span class="line"><span class="meta">@Import</span>(EnableWebMvcConfiguration<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">@<span class="title">EnableConfigurationProperties</span>(</span>&#123; WebMvcProperties<span class="class">.<span class="keyword">class</span>, <span class="title">ResourceProperties</span>.<span class="title">class</span> &#125;)</span></span><br><span class="line"><span class="class">@<span class="title">Order</span>(0)</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">static</span> <span class="title">class</span> <span class="title">WebMvcAutoConfigurationAdapter</span> <span class="keyword">implements</span> <span class="title">WebMvcConfigurer</span> </span>&#123;</span><br></pre></td></tr></table></figure>
 
 <p>@Import(EnableWebMvcConfiguration.class)</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200511144948441.png" alt="image-20200511144948441"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200511144948441.png" alt="SpringBoot/image-20200511144948441"></p>
 <p>效果：有的WebMVC的配置一起起作用</p>
 <h6 id="3-全面接管SpringBootMVC"><a href="#3-全面接管SpringBootMVC" class="headerlink" title="3.全面接管SpringBootMVC"></a>3.全面接管SpringBootMVC</h6><p>SpringBoot对SpringMVC的自动配置都不需要了，所有的都是自己来配置</p>
 <p>If you want to take complete control of Spring MVC, you can add your own <code>@Configuration</code> annotated with <code>@EnableWebMvc</code>, or alternatively add your own <code>@Configuration</code>-annotated <code>DelegatingWebMvcConfiguration</code> as described in the Javadoc of <code>@EnableWebMvc</code>.</p>
 <p>如果要完全控制Spring MVC，可以添加带有@EnableWebMvc注释的自己的@Configuration，或者添加自己的@Configuration注释的DelegatingWebMvcConfiguration，如@EnableWebMvc的Javadoc中所述。</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200511151239267.png" alt="image-20200511151239267"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200511151239267.png" alt="SpringBoot/image-20200511151239267"></p>
 <h5 id="5-如何修改SpringBoot的默认配置"><a href="#5-如何修改SpringBoot的默认配置" class="headerlink" title="==5.如何修改SpringBoot的默认配置=="></a>==5.如何修改SpringBoot的默认配置==</h5><p><strong>org.springframework.boot.autoconfigure.web：</strong>web的所有自动配置场景；</p>
 <p>模式：</p>
 <ol>
@@ -923,11 +923,11 @@
 <li>编写国际化配置文件，抽取页面要显示的国际化消息</li>
 </ol>
 <p>国际化配置文件</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200511175647814.png" alt="image-20200511175647814"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200511175647814.png" alt="SpringBoot/image-20200511175647814"></p>
 <ol start="2">
 <li>SpringBoot已经自动配置好了ResourceBundleMessageSource国际化资源管理组件</li>
 </ol>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200511194641641.png" alt="image-20200511194641641"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200511194641641.png" alt="SpringBoot/image-20200511194641641"></p>
 <ol start="3">
 <li>在页面获取国际化内容：使用#{………}获取国际化内容</li>
 <li>根据浏览器语言设置页面语言<ul>
@@ -1042,7 +1042,7 @@
 </ol>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"_method"</span> <span class="attr">value</span>=<span class="string">"put"</span> <span class="attr">th:if</span>=<span class="string">"$&#123;emp!=null&#125;"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200512170300499.png" alt="image-20200512170300499"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200512170300499.png" alt="SpringBoot/image-20200512170300499"></p>
 <h4 id="七、错误页面"><a href="#七、错误页面" class="headerlink" title="七、错误页面"></a>七、错误页面</h4><hr>
 <p><strong>可以参考ErrorMvcAutoConfiguration错误处理自动配置</strong></p>
 <p>给容器中添加了以下组件</p>
@@ -1072,7 +1072,7 @@
 </ol>
 <p>步骤：</p>
 <p>一但系统出现4XX或者5XX之类的错误；ErrorPageCustomizer就会生效（定制错误响应规则）；就会来到/error请求；就会被BasicErrorController处理；去哪个页面就会被DefaultErrorViewResolver解析处理</p>
-<img src="/2020/07/01/New-SpringBoo/image-20200513015818937.png" alt="image-20200513015818937" style="zoom: 200%;">
+<img src="/2020/07/01/SpringBoot/SpringBoot/image-20200513015818937.png" alt="SpringBoot/image-20200513015818937" style="zoom: 200%;">
 
 
 
@@ -1081,7 +1081,7 @@
 <li>@ControllerAdvice：全局异常处理<ol>
 <li>@ExceptionHandler ：注解用来指明异常的处理类型</li>
 <li>这样只能返回JSON的数据，不能区分客户端和浏览器</li>
-<li><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200513114726259.png" alt="image-20200513114726259"></li>
+<li><img src="/2020/07/01/SpringBoot/image-20200513114726259.png" alt="SpringBoot/image-20200513114726259"></li>
 </ol>
 </li>
 </ol>
@@ -1103,10 +1103,10 @@
 <p><strong>原理</strong></p>
 <p>SpringBoot获取错误信息的方式</p>
 <p>进入/error请求BasicErrorController就会处理请求，所以如果想要加入自己的错误信息，只要继承父类，然后覆写DefaultErrorAttributes即可</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200513153249103.png" alt="image-20200513153249103"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200513153249103.png" alt="SpringBoot/image-20200513153249103"></p>
 <h4 id="九、配置嵌入式Servlet容器"><a href="#九、配置嵌入式Servlet容器" class="headerlink" title="九、配置嵌入式Servlet容器"></a>九、配置嵌入式Servlet容器</h4><h6 id="1-修改Web容器配置"><a href="#1-修改Web容器配置" class="headerlink" title="1.修改Web容器配置"></a>1.修改Web容器配置</h6><p>SpringBoot默认使用的是嵌入式Servlet容器（Tomcat）；</p>
 <p>SpringBoot默认使用TomCat作为Servlet容器</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200513162936766.png" alt="image-20200513162936766"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200513162936766.png" alt="SpringBoot/image-20200513162936766"></p>
 <ol>
 <li><p>如何定制和修改Servlet容器相关配置</p>
 <ol>
@@ -1132,7 +1132,7 @@
 <p>SpringBoot帮我们配置了SpringMVC的时候，自动注册了SpringMVC的前端控制器</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span>(name = DEFAULT_DISPATCHER_SERVLET_REGISTRATION_BEAN_NAME)</span><br><span class="line"><span class="meta">@ConditionalOnBean</span>(value = DispatcherServlet<span class="class">.<span class="keyword">class</span>, <span class="title">name</span> </span>= DEFAULT_DISPATCHER_SERVLET_BEAN_NAME)</span><br><span class="line"><span class="function"><span class="keyword">public</span> DispatcherServletRegistrationBean <span class="title">dispatcherServletRegistration</span><span class="params">(DispatcherServlet dispatcherServlet,</span></span></span><br><span class="line"><span class="function"><span class="params">      WebMvcProperties webMvcProperties, ObjectProvider&lt;MultipartConfigElement&gt; multipartConfig)</span> </span>&#123;</span><br><span class="line">   DispatcherServletRegistrationBean registration = <span class="keyword">new</span> DispatcherServletRegistrationBean(dispatcherServlet,</span><br><span class="line">         webMvcProperties.getServlet().getPath());</span><br><span class="line">   registration.setName(DEFAULT_DISPATCHER_SERVLET_BEAN_NAME);</span><br><span class="line">   registration.setLoadOnStartup(webMvcProperties.getServlet().getLoadOnStartup());</span><br><span class="line">   multipartConfig.ifAvailable(registration::setMultipartConfig);</span><br><span class="line">   <span class="keyword">return</span> registration;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200513224803286.png" alt="image-20200513224803286"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200513224803286.png" alt="SpringBoot/image-20200513224803286"></p>
 <h4 id="十、配置嵌入式Servlet容器-（先跳过）"><a href="#十、配置嵌入式Servlet容器-（先跳过）" class="headerlink" title="十、配置嵌入式Servlet容器==（先跳过）=="></a>十、配置嵌入式Servlet容器==（先跳过）==</h4><p>SpringBoot默认内置了TomCat</p>
 <p>怎么使用其他Web容器呢</p>
 <p>Jetty（适合长连接）</p>
@@ -1149,7 +1149,7 @@
 <p>docker仓库(Registry)：用来保存各种打包好的软件镜像；</p>
 <p>docker镜像(Images)：软件打包好的镜像；放在docker仓库中；</p>
 <p>docker容器(Container)：镜像启动后的实例称为一个容器；容器是独立运行的一个或一组应用</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200514004528149.png" alt="image-20200514004528149"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200514004528149.png" alt="SpringBoot/image-20200514004528149"></p>
 <p>使用Docker的步骤：</p>
 <ol>
 <li>安装Docker</li>
@@ -1207,13 +1207,13 @@
 </tr>
 <tr>
 <td>删除</td>
-<td>docker rmi image-id</td>
+<td>docker rmi SpringBoot/image-id</td>
 <td>删除指定的本地镜像</td>
 </tr>
 </tbody></table>
 <p><strong>查找镜像</strong></p>
 <p><strong>docker search mysql</strong></p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200514011933205.png" alt="image-20200514011933205"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200514011933205.png" alt="SpringBoot/image-20200514011933205"></p>
 <h5 id="5-容器操作"><a href="#5-容器操作" class="headerlink" title="5.容器操作"></a>5.容器操作</h5><table>
 <thead>
 <tr>
@@ -1259,7 +1259,7 @@
 </tr>
 </tbody></table>
 <p><strong>为什么要进行端口映射？</strong></p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200514092444065.png" alt="image-20200514092444065"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200514092444065.png" alt="SpringBoot/image-20200514092444065"></p>
 <p>在阿里拉取的镜像访问TomCat会出现404，解决方法</p>
 <p>docker exec -it mytomcat /bin/bash   </p>
 <p>将webapps.dist改为webapps</p>
@@ -1282,9 +1282,9 @@
 <p>​        数据源所有的相关配置都在DataSourceProperties里面</p>
 <p>自动配置原理：</p>
 <p>参考DataSourceConfiguration，根据数配置创建数据源，默认使用Hikari数据源，也可以使用spring.datasource.type指定自定义的数据源类型</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200514182419583.png" alt="image-20200514182419583"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200514182419583.png" alt="SpringBoot/image-20200514182419583"></p>
 <p>SpringBoot默认支持的数据源：</p>
-<p><img src="/2020/07/01/New-SpringBoo/New-SpringBoo%5Cimage-20200514182513545.png" alt="image-20200514182513545"></p>
+<p><img src="/2020/07/01/SpringBoot/image-20200514182513545.png" alt="SpringBoot/image-20200514182513545"></p>
 <p>也可以自定义数据源类型</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">createDataSource</span><span class="params">(DataSourceProperties properties, Class&lt;? extends DataSource&gt; type)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//使用DataSourceBuilder创建数据源，；利用反射创建相应的type数据源并绑定属性</span></span><br><span class="line">   <span class="keyword">return</span> (T) properties.initializeDataSourceBuilder().type(type).build();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1420,7 +1420,7 @@
           
         
           
-            <p>本文永久链接是：<a href=http://zmmmmy.github.io/2020/07/01/New-SpringBoo/>http://zmmmmy.github.io/2020/07/01/New-SpringBoo/</a></p>
+            <p>本文永久链接是：<a href=http://zmmmmy.github.io/2020/07/01/SpringBoot/>http://zmmmmy.github.io/2020/07/01/SpringBoot/</a></p>
           
         
       </blockquote>
@@ -1471,7 +1471,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-01T14:40:49+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-01T14:48:49+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Jul 1, 2020</p>
@@ -1501,7 +1501,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=http://zmmmmy.github.io/2020/07/01/New-SpringBoo/&title=SpringBoot - 芝麻盐的博客&summary=这是一篇关于SpringBoot的笔记"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://zmmmmy.github.io/2020/07/01/SpringBoot/&title=SpringBoot - 芝麻盐的博客&summary=这是一篇关于SpringBoot的笔记"
           
           >
           
@@ -1513,7 +1513,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://zmmmmy.github.io/2020/07/01/New-SpringBoo/&title=SpringBoot - 芝麻盐的博客&summary=这是一篇关于SpringBoot的笔记"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://zmmmmy.github.io/2020/07/01/SpringBoot/&title=SpringBoot - 芝麻盐的博客&summary=这是一篇关于SpringBoot的笔记"
           
           >
           
@@ -1525,7 +1525,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=http://zmmmmy.github.io/2020/07/01/New-SpringBoo/&title=SpringBoot - 芝麻盐的博客&summary=这是一篇关于SpringBoot的笔记"
+          href="http://service.weibo.com/share/share.php?url=http://zmmmmy.github.io/2020/07/01/SpringBoot/&title=SpringBoot - 芝麻盐的博客&summary=这是一篇关于SpringBoot的笔记"
           
           >
           
@@ -1549,8 +1549,9 @@
         
           <div class="prev-next">
             
-              <a class='prev' href='/2020/07/01/SpringBoot/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>SpringBoot</p>
+            
+              <a class='next' href='/2020/07/01/New-SpringBoo/'>
+                <p class='title'>SpringBoot<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
                 <p class='content'>这是一篇关于SpringBoot的笔记
 
 
@@ -1560,12 +1561,6 @@
 1.配置文件SpringBoot使用一个全局的配置文件，配置文件名字是固定的
 
 applicat...</p>
-              </a>
-            
-            
-              <a class='next' href='/2020/06/30/Hello/'>
-                <p class='title'>Hello<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>大家好，我是芝麻盐，这是一个乱码西糟的博客</p>
               </a>
             
           </div>
