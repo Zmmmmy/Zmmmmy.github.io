@@ -909,7 +909,7 @@ setInterval("createtime()",250);
   
   <script>
   var GUEST_INFO = ['nick','mail','link'];
-  var meta = 'nick,mail,link'.split(',').filter(function(item){
+  var meta = 'nick,mail'.split(',').filter(function(item){
     return GUEST_INFO.indexOf(item) > -1
   });
   var REQUIRED_FIELDS = ['nick','mail','link'];
@@ -942,9 +942,9 @@ setInterval("createtime()",250);
     
     appId: "e2yTjLQ241pn3nKO6JBkJ9vL-gzGzoHsz",
     appKey: "jIrelgWguEyhPAychNUkBlU3",
-    placeholder: "快来评论吧~",
+    placeholder: "快来评论吧！记得写昵称和邮箱哦~好让我知道你是谁",
     pageSize:'10',
-    avatar:'robohash',
+    avatar:'monsterid',
     lang:'zh-cn',
     visitor: 'true',
     highlight: 'true',
